@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D7D81DA11EEF3ACF00524598 /* HotTub.m in Sources */ = {isa = PBXBuildFile; fileRef = D7D81DA01EEF3ACF00524598 /* HotTub.m */; };
 		EDFAAA211CE14F9B00D2CB08 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFAAA201CE14F9B00D2CB08 /* main.swift */; };
 		EDFAAA291CE14FB000D2CB08 /* House.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFAAA271CE14FB000D2CB08 /* House.swift */; };
 		EDFAAA2A1CE14FB000D2CB08 /* Bedroom.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFAAA281CE14FB000D2CB08 /* Bedroom.swift */; };
@@ -25,6 +26,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		D7D81D9E1EEF3ACF00524598 /* House_Swift_main-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "House_Swift_main-Bridging-Header.h"; sourceTree = "<group>"; };
+		D7D81D9F1EEF3ACF00524598 /* HotTub.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HotTub.h; sourceTree = "<group>"; };
+		D7D81DA01EEF3ACF00524598 /* HotTub.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HotTub.m; sourceTree = "<group>"; };
 		EDFAAA1D1CE14F9B00D2CB08 /* House_Swift_main */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = House_Swift_main; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDFAAA201CE14F9B00D2CB08 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		EDFAAA271CE14FB000D2CB08 /* House.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = House.swift; sourceTree = "<group>"; };
@@ -62,8 +66,11 @@
 			isa = PBXGroup;
 			children = (
 				EDFAAA201CE14F9B00D2CB08 /* main.swift */,
+				D7D81D9F1EEF3ACF00524598 /* HotTub.h */,
+				D7D81DA01EEF3ACF00524598 /* HotTub.m */,
 				EDFAAA271CE14FB000D2CB08 /* House.swift */,
 				EDFAAA281CE14FB000D2CB08 /* Bedroom.swift */,
+				D7D81D9E1EEF3ACF00524598 /* House_Swift_main-Bridging-Header.h */,
 			);
 			path = House_Swift_main;
 			sourceTree = "<group>";
@@ -100,7 +107,7 @@
 				TargetAttributes = {
 					EDFAAA1C1CE14F9B00D2CB08 = {
 						CreatedOnToolsVersion = 7.3;
-						LastSwiftMigration = 0800;
+						LastSwiftMigration = 0820;
 					};
 				};
 			};
@@ -127,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDFAAA2A1CE14FB000D2CB08 /* Bedroom.swift in Sources */,
+				D7D81DA11EEF3ACF00524598 /* HotTub.m in Sources */,
 				EDFAAA291CE14FB000D2CB08 /* House.swift in Sources */,
 				EDFAAA211CE14F9B00D2CB08 /* main.swift in Sources */,
 			);
@@ -220,16 +228,23 @@
 		EDFAAA251CE14F9B00D2CB08 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_OBJC_BRIDGING_HEADER = "House_Swift_main/House_Swift_main-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		EDFAAA261CE14F9B00D2CB08 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 2.3;
+				SWIFT_OBJC_BRIDGING_HEADER = "House_Swift_main/House_Swift_main-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};

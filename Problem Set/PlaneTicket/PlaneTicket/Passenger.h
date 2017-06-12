@@ -10,9 +10,9 @@
 
 @interface Passenger : NSObject
 
-@property (nonatomic, copy) NSString *name;
-@property (nonatomic, readonly) NSDate *birthday;
+@property (nonatomic, copy) NSString * _Nonnull name;
+@property (nonatomic, readonly) NSDate * _Nullable birthday;
 
--(instancetype)initWithName:(NSString*)name;
+-(instancetype _Nullable)initWithName:(NSString* _Nonnull)name;
 
 @end
