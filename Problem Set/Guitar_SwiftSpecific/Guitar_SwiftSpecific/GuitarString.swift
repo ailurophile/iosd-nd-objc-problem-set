@@ -9,38 +9,38 @@
 import Cocoa
 
 
-enum Error: ErrorType {
-    case Broken
-    case OutOfTune
+@objc enum StringError: Int, Error {
+    case broken = 98
+    case outOfTune = 99
 }
 
-struct GuitarString {
+class GuitarString:NSObject {
     
-    var broken: Bool = false
-    var outOfTune: Bool = false
+    var broke: Bool = false
+    var outofTune: Bool = false
     
-    mutating func pluck(velocity: Float) throws {
-        if broken {
+    func pluck(velocity: Float) throws {
+        if broke {
             // can't play a broken string
-            throw Error.Broken
+            throw StringError.broken
         }
         
-        if outOfTune {
+        if outofTune {
             // you can still play an out of tune string, this is just to illustrate another error type
-            throw Error.OutOfTune
+            throw StringError.outOfTune
         }
         
         // We're playing the string really hard.
         if velocity > 0.8 {
             if arc4random() % 2 == 0 {
                 // We knocked the string out of tune. The next time we play, it will sound bad.
-                outOfTune = true
+                outofTune = true
             }
             
             if arc4random() % 2 == 1 {
                 // We broke the string! This sounds bad when it happens, so throw an error right away.
-                broken = true
-                throw Error.Broken
+                broke = true
+                throw StringError.broken
             }
         }
         
