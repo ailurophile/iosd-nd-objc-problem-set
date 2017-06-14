@@ -10,7 +10,7 @@
 
 @interface Passenger()
 
-@property (nonatomic, readwrite) NSDate *birthday;
+@property (nonatomic, readwrite) NSDate * _Nullable birthday;
 
 @end
 

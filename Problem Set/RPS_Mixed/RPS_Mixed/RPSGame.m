@@ -7,7 +7,7 @@
 //
 
 #import "RPSGame.h"
-
+#import "RPS_Mixed-Swift.h"
 @implementation RPSGame
 
 -(instancetype)initWithFirstTurn:(RPSTurn*) playerTurn
