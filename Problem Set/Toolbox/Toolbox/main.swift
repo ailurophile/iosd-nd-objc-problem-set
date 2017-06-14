@@ -17,4 +17,8 @@ myToolbox.tools = [myHammer, myDrill]
 let randomIndex = Int(arc4random_uniform(2))
 let tool = myToolbox.tools[randomIndex]
 
-(tool as? Drill)?.screw()
+if let tool = tool as? Drill{
+    tool.screw()
+} else{
+    (tool as? Hammer)?.drive()
+}

@@ -9,5 +9,6 @@
 #import <Foundation/Foundation.h>
 
 @interface Pig : NSObject
+-(void)wallow;
 
 @end
