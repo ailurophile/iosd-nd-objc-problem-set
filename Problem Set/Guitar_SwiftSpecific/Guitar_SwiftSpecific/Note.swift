@@ -11,4 +11,9 @@ import Cocoa
 @objc class Note: NSObject {
     
     var velocity: Float?
+
+    init(velocity: Float){
+        super.init()
+        self.velocity = velocity
+    }
 }

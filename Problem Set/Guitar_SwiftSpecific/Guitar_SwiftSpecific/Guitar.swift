@@ -30,7 +30,7 @@ class Guitar {
     
     func pluckString(_ string: inout GuitarString, velocity: Float) throws {
         // Pluck the note 
-        try string.pluck(velocity)
+        try string.pluck(velocity: velocity)
     }
 }
 

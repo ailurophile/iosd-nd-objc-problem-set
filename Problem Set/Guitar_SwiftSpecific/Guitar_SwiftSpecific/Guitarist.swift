@@ -18,10 +18,10 @@ import Cocoa
             do {
                 try guitar.playNote(note)
                 
-            } catch Error.broken {
+            } catch StringError.broken {
                 print("Quick, replace the string!")
                 break
-            } catch Error.outOfTune {
+            } catch StringError.outOfTune {
                 print("Uh oh! Tuning break.")
                 break
             } catch {
